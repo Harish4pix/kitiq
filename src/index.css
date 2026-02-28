@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #0d1117;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2dd4bf;
+  border-radius: 3px;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-animate {
+  animation: fadeSlideIn 1s ease forwards;
+  position: relative;
+  z-index: 0;
+}
+
+/* ─── SCROLL ANIMATIONS ─────────────────────────────────── */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-animate-d1 { transition-delay: 0.1s; }
+.scroll-animate-d2 { transition-delay: 0.2s; }
+.scroll-animate-d3 { transition-delay: 0.3s; }
+.scroll-animate-d4 { transition-delay: 0.4s; }
